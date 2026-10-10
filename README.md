@@ -4,6 +4,8 @@ ERPNext can allocate a payment across invoices, including partial amounts. When 
 
 For example, in the focused local fixture, an invoice outstanding at 200 and a payment with 55 unallocated receive a reviewed allocation of 40. Approval invokes ERPNext's original `reconcile()` path; afterward the invoice has 160 outstanding and the payment has 15 unallocated. A defer or reject decision records the review without changing either balance.
 
+Start with the [review API example](#try-the-review-interface). The authored [review wrapper](adaptation/review_trail.py) invokes ERPNext's `reconcile()` method on approval; the [pinned controller excerpt](source/erpnext/accounts/doctype/payment_reconciliation/) preserves that upstream path. The [focused tests](adaptation/test_review_trail.py) run against a full pinned ERPNext/Frappe checkout, as detailed in [verification](VERIFICATION.md) and [provenance](PROVENANCE.json).
+
 ## Try the review interface
 
 Run this **inside an existing ERPNext/Frappe v15.122.0 site at the pins in [PROVENANCE.json](PROVENANCE.json)** after preparing a `Payment Reconciliation` document with selected allocation rows through ERPNext's normal workflow. Add this repository's root to that environment's `PYTHONPATH` so `adaptation` is importable. The caller must show the complete preview to the operator, obtain their decision, and pass the digest of that same preview back. The digest binds the reviewed context, voucher identities, selected source balances, allocations, decision, and reason; it does not authenticate the person who reviewed them.

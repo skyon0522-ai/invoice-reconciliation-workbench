@@ -1,0 +1,61 @@
+{
+  "status": "PASS for the selected local baselines and seven focused review-trail tests",
+  "date": "2026-10-10",
+  "source": {
+    "erpnext_tag": "v15.122.0",
+    "erpnext_commit": "bfd8100d42162048248b7b947f2e21fdf7999a91",
+    "frappe_tag": "v15.122.0",
+    "frappe_commit": "b0b5b99a1d9d2cb3d54b32293d3854bf2c15f4a4",
+    "copied_manifest_entries": 15,
+    "copied_bytes_and_original_git_modes_verified": true
+  },
+  "runtime_versions": {
+    "bench": "5.31.0",
+    "python": "3.12.3",
+    "mariadb": "10.11.19",
+    "redis": "7.2.16",
+    "node": "24.18.0",
+    "yarn": "1.22.22"
+  },
+  "tests": [
+    {
+      "stage": "original selected ERPNext module",
+      "site": "test_site",
+      "command": "bench --site test_site run-tests --app erpnext --module erpnext.accounts.doctype.payment_reconciliation.test_payment_reconciliation",
+      "tests_run": 41,
+      "result": "OK"
+    },
+    {
+      "stage": "copied selected ERPNext module",
+      "site": "copy_test_site",
+      "command": "bench --site copy_test_site run-tests --app erpnext --module erpnext.accounts.doctype.payment_reconciliation.test_payment_reconciliation",
+      "tests_run": 41,
+      "reported_seconds": 154.855,
+      "exit_code": 0,
+      "result": "OK"
+    },
+    {
+      "stage": "review-trail adaptation on copied full runtime",
+      "site": "copy_test_site",
+      "command": "bench --site copy_test_site run-tests --app erpnext --module adaptation.test_review_trail --case TestReviewTrail",
+      "tests_run": 7,
+      "reported_seconds": 23.812,
+      "exit_code": 0,
+      "failures_or_errors": 0,
+      "result": "OK"
+    }
+  ],
+  "tested_adaptation_sha256": {
+    "adaptation/review_trail.py": "e09a750a7a7277ab9f4bed1359d392293692e10f68c45a7ceb533073ecfcab98",
+    "adaptation/test_review_trail.py": "9f5a5dbecb02283db638785c6b84b9b9f623f5e0a8f933e45bac5e6cec59b5c6"
+  },
+  "tested_privacy_path": "A user shared only one invoice could not read the private full-review Note or see other voucher details in that invoice's Comment; a prior Comment disclosure in this path was corrected before the passing seven-test run.",
+  "test_source_scope": "The adaptation tests imported the separate full pinned ERPNext/Frappe checkout. This repository's 15-file excerpt matched pinned bytes and Git modes but was not imported directly from source/ by those seven tests. The copied 41-test oracle used matching selected source files in the copied full runtime.",
+  "cleanup": {
+    "copy_site_config_restored_byte_for_byte": true,
+    "task_owned_database_and_redis_services_stopped": true,
+    "task_local_service_ports_closed": true,
+    "both_pinned_runtime_worktrees_clean": true
+  },
+  "limits": "Selected modules only; no full ERPNext suite, fresh installation, PDF path, production concurrency test, customer workflow, custom permission-hook assessment, or immutable-audit assessment."
+}

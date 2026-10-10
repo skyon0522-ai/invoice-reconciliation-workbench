@@ -1,0 +1,189 @@
+{
+  "component": "invoice-reconciliation-workbench-source-based",
+  "upstream_repository": "https://github.com/frappe/erpnext.git",
+  "upstream_tag": "v15.122.0",
+  "upstream_commit": "bfd8100d42162048248b7b947f2e21fdf7999a91",
+  "upstream_license": "GPL-3.0",
+  "copy_method": "git show from the pinned commit into preserved upstream paths; all copied files are unmodified",
+  "file_counts": {
+    "runtime_component": 13,
+    "test_oracle": 1,
+    "upstream_license": 1,
+    "upstream_code_and_test_total": 14
+  },
+  "byte_counts": {
+    "runtime_component": 59457,
+    "test_oracle": 93256,
+    "upstream_code_and_test_total": 152713,
+    "license": 35149
+  },
+  "files": [
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation/__init__.py",
+      "git_mode": "100644",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation/__init__.py",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation/payment_reconciliation.py",
+      "git_mode": "100644",
+      "git_blob": "8a11e3310adcc0e866e80dd7572a97eee185182b",
+      "sha256": "801230c8220691213d51d4c474ee55be9e58519b79ddf3796f78f5d05d730723",
+      "bytes": 30781,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation/payment_reconciliation.py",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation/payment_reconciliation.js",
+      "git_mode": "100644",
+      "git_blob": "0732e2a7f0e8b12f8cc7a5cff9a77a9f13d4c7c1",
+      "sha256": "6e3a77c07dffbcf1e15dbe6955eec3f8aba2eebf0e7b49a02dfd4687449a52b7",
+      "bytes": 11721,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation/payment_reconciliation.js",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation/payment_reconciliation.json",
+      "git_mode": "100644",
+      "git_blob": "a0e9183f7ba60104cc4f5f0897886a53e625d46b",
+      "sha256": "246337a4410cd39f7ddc68f74911a3b42d65776946a9fc890334a00d8e16329e",
+      "bytes": 6169,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation/payment_reconciliation.json",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation/test_payment_reconciliation.py",
+      "git_mode": "100644",
+      "git_blob": "b362f0b7b17c92641241c05b87b8b737bd4bccf2",
+      "sha256": "a93e58ae37d892530075de827c86002b0aa8e5ff99fbcbca9d7fb45bffb7a810",
+      "bytes": 93256,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation/test_payment_reconciliation.py",
+      "role": "test_oracle"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation_allocation/__init__.py",
+      "git_mode": "100644",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation_allocation/__init__.py",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation_allocation/payment_reconciliation_allocation.py",
+      "git_mode": "100644",
+      "git_blob": "125ae28f3f52606ce6488070a4a68bcec8f87bd6",
+      "sha256": "c5afa1d40fafd6e918f11b6a59b2b0a6d5e762c911709de1e07175d4371ddd12",
+      "bytes": 1065,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation_allocation/payment_reconciliation_allocation.py",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation_allocation/payment_reconciliation_allocation.json",
+      "git_mode": "100644",
+      "git_blob": "e4430de504925050460b0aea3c27192bc58feb94",
+      "sha256": "16155fbf6c1c51b4b2a769300d87732e9f60f4d96434b9de5ba1d44f01b65480",
+      "bytes": 3911,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation_allocation/payment_reconciliation_allocation.json",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation_invoice/__init__.py",
+      "git_mode": "100644",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation_invoice/__init__.py",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation_invoice/payment_reconciliation_invoice.py",
+      "git_mode": "100644",
+      "git_blob": "fa18ccd1350d7dcc520196b13af22c7b3f94dff2",
+      "sha256": "763ba6f8b3ced593af38ff8d4adf2db184589c336ada7e141be927a43153d447",
+      "bytes": 813,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation_invoice/payment_reconciliation_invoice.py",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation_invoice/payment_reconciliation_invoice.json",
+      "git_mode": "100644",
+      "git_blob": "7c9d49e7731347bcb2b5137ebf0e01ed74ee730b",
+      "sha256": "243dd0615dfa2a90fe511b2242e31fdfdf4569faf89a7633240d4ff4de173440",
+      "bytes": 1763,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation_invoice/payment_reconciliation_invoice.json",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation_payment/__init__.py",
+      "git_mode": "100644",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation_payment/__init__.py",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation_payment/payment_reconciliation_payment.py",
+      "git_mode": "100644",
+      "git_blob": "49c17eae41b783306a8c830d2e81602a3afb944f",
+      "sha256": "d014257cc8f415ae747d6b913dcea3a14283e6b780eb5b26617525bd2ecc89d5",
+      "bytes": 886,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation_payment/payment_reconciliation_payment.py",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "erpnext/accounts/doctype/payment_reconciliation_payment/payment_reconciliation_payment.json",
+      "git_mode": "100644",
+      "git_blob": "010e93558cfd51d81f585eca4a03fd0b3210c7a6",
+      "sha256": "04bb93ec95903afd02fe11abd49ad7ba31330a6f554f136f1340101be024927b",
+      "bytes": 2348,
+      "destination": "source/erpnext/accounts/doctype/payment_reconciliation_payment/payment_reconciliation_payment.json",
+      "role": "runtime_component"
+    },
+    {
+      "upstream_path": "license.txt",
+      "git_mode": "100644",
+      "git_blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "destination": "LICENSE",
+      "role": "license"
+    }
+  ],
+  "external_dependencies": {
+    "frappe": {
+      "tag": "v15.122.0",
+      "commit": "b0b5b99a1d9d2cb3d54b32293d3854bf2c15f4a4",
+      "license": "MIT",
+      "copied": false
+    },
+    "erpnext_core": "The component imports ERPNext accounting, payment-processing, accounting-dimension, controller, child-DocType, and test-helper modules outside this copied slice; they remain at the pinned ERPNext commit.",
+    "runtime": "Bench 5.31.0, Python 3.12.3, MariaDB 10.11.19, Redis 7.2.16, Node 24.18.0 and Yarn 1.22.22 remain task-local runtime dependencies, not copied product source."
+  },
+  "baseline": {
+    "status": "original and copied selected-source baselines passed; focused review-trail integration passed",
+    "original_test_oracle": "erpnext.accounts.doctype.payment_reconciliation.test_payment_reconciliation",
+    "copied_site": "copy_test_site",
+    "selected_tests": 41,
+    "result": "OK",
+    "exit_code": 0,
+    "test_reported_seconds": 154.855,
+    "receipt": "verification/results.json",
+    "limits": "Selected module only; not the full ERPNext suite or a standalone installation."
+  },
+  "review_trail_adaptation": {
+    "role": "Original wrapper around ERPNext Payment Reconciliation: preview, digest-checked review decision, permission and balance checks, private Note and limited voucher Comments, and approve via upstream reconcile().",
+    "files_sha256": {
+      "adaptation/review_trail.py": "e09a750a7a7277ab9f4bed1359d392293692e10f68c45a7ceb533073ecfcab98",
+      "adaptation/test_review_trail.py": "9f5a5dbecb02283db638785c6b84b9b9f623f5e0a8f933e45bac5e6cec59b5c6"
+    },
+    "focused_tests": 7,
+    "result": "OK",
+    "receipt": "verification/results.json",
+    "runtime_scope": "Tests ran against a separate full copied ERPNext/Frappe checkout at the listed pins. The 15-file excerpt was verified byte-for-byte with upstream and the copied runtime, but the seven adaptation tests did not import Python directly from this candidate's source/ directory."
+  }
+}
